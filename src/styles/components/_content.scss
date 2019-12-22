@@ -1,0 +1,22 @@
+body {
+    padding: 16px;
+    @include mq(lg) {
+        padding: 32px;
+    }
+}
+
+.main-content {
+    section {
+        margin-bottom: 96px;
+        padding-top: 94px;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        &.intro {
+            padding-top: 56px;
+        }
+        @include mq(md) {
+            min-height: 90vh;
+        }
+    }
+}

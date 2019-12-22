@@ -1,0 +1,36 @@
+.gallery {
+    &__content {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        @include mq(md) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        position: relative;
+        border: 1px solid $black;
+        background: $primary;
+        grid-gap: 1px;
+        overflow: hidden;
+
+        figure {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                filter: grayscale(100%) contrast(2.75);
+                mix-blend-mode: multiply;
+                &:hover {
+                    filter: none;
+                    mix-blend-mode: normal;
+                }
+            }
+        }
+    }
+}

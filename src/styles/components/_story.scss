@@ -1,0 +1,53 @@
+.story {
+    min-height: 100vh;
+    &__content {
+        border: 1px solid $black;
+        min-height: $contentHeight;
+        display: flex;
+        flex-direction: column;
+        @include mq(md) {
+            flex-direction: row;
+        }
+        & > div {
+            flex-basis: 50%;
+            padding: 32px;
+            &:first-child {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include mq(md) {
+                    border-right: 1px solid $black;
+                }
+            }
+            &:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                p {
+                    @include title-XL;
+                    margin-bottom: 24px;
+                    &.author {
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+        .star_icon {
+            position: absolute;
+            left: 0;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        margin: 0 auto;
+        border: 1px solid $black;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

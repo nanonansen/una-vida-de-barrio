@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin title-XL {
+    font-size: 14px;
+    @include mq(sm) {
+        font-size: 18px;
+    }
+    @include mq(md) {
+        font-size: 20px;
+    }
+    @include mq(lg) {
+        font-size: 22px;
+    }
+    @include mq(xl) {
+        font-size: 22px;
+    }
+}
